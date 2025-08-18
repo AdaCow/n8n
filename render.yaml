@@ -52,6 +52,9 @@ services:
           name: n8n-db
           property: user
 
+      # ADD THIS LINE: Enable crypto module in Code nodes
+      - key: NODE_FUNCTION_ALLOW_BUILTIN
+        value: crypto
 databases:
   - name: n8n-db
     plan: free
