@@ -55,6 +55,15 @@ services:
       # ADD THIS LINE: Enable crypto module in Code nodes
       - key: NODE_FUNCTION_ALLOW_BUILTIN
         value: crypto
+
+      # ADD THESE FOR 24-HOUR PRUNING:
+      - key: EXECUTIONS_DATA_PRUNE
+        value: "true"
+      - key: EXECUTIONS_DATA_MAX_AGE
+        value: "24"
+      - key: EXECUTIONS_DATA_PRUNE_MAX_COUNT
+        value: "10000"
+        
 databases:
   - name: n8n-db
     plan: free
