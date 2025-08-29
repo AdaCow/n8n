@@ -9,7 +9,7 @@
 
 services:
   - type: web
-    plan: starter
+    plan: standard
     
     region: frankfurt
     # This is the runtime for services that pull a prebuilt Docker image
